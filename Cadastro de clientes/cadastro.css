@@ -103,8 +103,7 @@ background-color: transparent;
 }
 .clientes::-webkit-scrollbar-thumb{
     background-color:  rgb(252, 252, 105);
-border-radius: 10px;
-
+    border-radius: 10px;
 }
 
 /* CONTEINER DOS CLIENTES CADASTRADOS */
@@ -276,7 +275,7 @@ border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: #fff;
+    background-color:  rgb(255, 255, 34);
     width: 400px;
     height: 180px;
 }
@@ -291,12 +290,15 @@ border-radius: 10px;
     border-radius: 8px;
     height: 40px;
     padding: 10px;
+    margin:  auto 15px;
     cursor: pointer;
 }
 
 .buttons button:hover{
-    background-color:  rgb(255, 255, 34);
-
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+    background-color:  rgb(34, 67, 255);
+    color: #fff;
 }
 
 .conteiner_confirm{
