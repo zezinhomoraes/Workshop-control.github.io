@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />  
+    <script src="cadastro.js" defer></script>
+    <script src="cadastro2.js" defer></script>
+    <title>Cadastro de clientes</title>
+</head>
+<body>
+
+
+<nav class="nav_bar">
+    <h1>Jaguar Bike</h1>
+</nav>
+
+<main>
+<div class="principal">
+    <menu>
+        <div class="busca">
+            <input type="text" name="busca_i" id="busca_i" placeholder="Faça uma busca"><span for="busca_i" id="icone_b" class="material-symbols-outlined">search</span>
+        </div>
+        <a href="../projeto.html"><button class="home">Home</button></a>
+        <button class="add_cliente">Adicionar Cliente</button>
+        <button class="edit_cliente">Editar Cliente</button>
+        <button class="remove_cliente">Remover Cliente</button>
+    </menu>
+
+    <div class="clientes">
+    </div>
+</div>
+<div class="box_addclient ">
+    <h1>Adicione seu cliente</h1>
+    <div class="content">
+        <label for="nomeI">Nome:</label>
+        <input type="text" name="nomeI" id="nomeI" placeholder="Ex: Fulano Ciclano">
+    </div>
+
+    <div class="content">
+        <label for="telefoneI">Telefone:</label>
+        <input type="tel" name="telefoneI" id="telefoneI" placeholder="Ex: 12 912345678">
+    </div>
+
+    <div class="content">
+        <label for="whatsappI">Whatsapp:</label>
+        <input type="tel" name="whatsappI"id="whatsappI"  placeholder="Ex: 12 912345678">    
+    </div>
+    
+    <div class="content">
+        <label for="bikeI">Bike:</label>
+        <input type="text" name="bikeI" id="bikeI">
+    </div>
+
+    <div class="content">
+        <label for="ulServicoI">Ultimo serviço:</label>
+        <input type="text" name="ulServicoI"id="ulServicoI"> 
+    </div>
+    
+    <div class="content">
+        <label for="dataI">Data:</label>
+        <input  type="date" name="dataI" id="dataI">
+    </div>
+
+    <div class="content">
+        <label for="moreInfoI">Mais informações:</label>
+        <textarea name="moreInfoI" id="moreInfoI" cols="30" rows="10"></textarea>
+    </div>
+    <div class="btns">
+        <button class="ok">Adicionar</button>
+        <button class="cancel">Cancelar</button>
+    </div>
+</div>
+</main>
+
+<!-- FORMULARIO DE EDIÇÃO DE CLIENTES -->
+
+<div class="box_editclient ">
+    <h1>Edite seu cliente</h1>
+    <div class="content_edit">
+        <label for="nomeI">Nome:</label>
+        <input type="text" name="nomeI" id="nomeI" placeholder="Ex: Fulano Ciclano">
+    </div>
+
+    <div class="content_edit">
+        <label for="telefoneI">Telefone:</label>
+        <input type="tel" name="telefoneI" id="telefoneI" placeholder="Ex: 12 912345678">
+    </div>
+
+    <div class="content_edit">
+        <label for="whatsappI">Whatsapp:</label>
+        <input type="tel" name="whatsappI"id="whatsappI"  placeholder="Ex: 12 912345678">    
+    </div>
+    
+    <div class="content_edit">
+        <label for="bikeI">Bike:</label>
+        <input type="text" name="bikeI" id="bikeI">
+    </div>
+
+    <div class="content_edit">
+        <label for="ulServicoI">Ultimo serviço:</label>
+        <input type="text" name="ulServicoI"id="ulServicoI"> 
+    </div>
+    
+    <div class="content_edit">
+        <label for="dataI">Data:</label>
+        <input  type="date" name="dataI" id="dataI">
+    </div>
+
+    <div class="content_edit">
+        <label for="moreInfoI">Mais informações:</label>
+        <textarea name="moreInfoI" id="moreInfoI" cols="30" rows="10"></textarea>
+    </div>
+    <div class="btns">
+        <button class="confirm">Confirmar</button>
+        <button class="cancel">Cancelar</button>
+    </div>
+</div>
+
+<div class="sumiu">
+    <div class="box_confirm"> 
+        <h1>Realmente quer excluir</h1>
+        <div class="buttons">
+
+            <button class="confirm_remove">CONFIRMAR</button>
+            <button class="cancel_remove">CANCELAR</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
