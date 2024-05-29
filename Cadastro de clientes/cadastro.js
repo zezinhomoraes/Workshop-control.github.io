@@ -108,7 +108,7 @@ edit_cliente.addEventListener("click", (evt)=>{
 
     if(cli){
         const edit = new boxEditarCliente
-            edit.open()
+            edit.open(cli)
             const cancel = document.querySelector(".cancelar")
             cancel.addEventListener("click",(evt)=>{
                 edit.close()
@@ -116,8 +116,6 @@ edit_cliente.addEventListener("click", (evt)=>{
             const confirm = document.querySelector(".confirmar")
             confirm.addEventListener("click",()=>{
                 edit.editandoCliente(cli)
-                console.log(cli);
-                edit.close()
             })
     }
 
