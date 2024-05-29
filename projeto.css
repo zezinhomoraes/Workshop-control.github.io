@@ -95,3 +95,45 @@ main{
 .text_ativo{
     display: block !important;
 }
+
+
+
+
+@media screen and (max-width: 768px){
+
+    *{
+        font-size: 18px;
+    }
+
+    main{
+        display: block;
+    }
+
+    .nav_bar h1{
+        font-size: 24px;
+    }
+
+    .conteiner_f{
+        display: block;
+        border: none;
+        height: 200px;
+        width: 70vw;
+    }
+
+    .btn_f{
+        margin: 10px auto;
+        width: 200px;
+        height: 40px;
+        display: block;
+    }
+
+    .conteiner_d{
+        width: 70vw;
+        margin: 0 auto;
+    }
+
+    .descrition, p{
+        width: 100%;
+    }
+
+}
