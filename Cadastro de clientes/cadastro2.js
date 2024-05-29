@@ -185,7 +185,8 @@ const boxRemoveClient = function(el, i){
 class boxEditarCliente{
     open(el){
         const box_editclient = document.querySelector(".box_editclient")
-        box_editclient.firstElementChild.innerHTML+=el.nextElementSibling.firstElementChild.firstElementChild.firstElementChild.textContent
+        box_editclient.firstElementChild.innerHTML=""
+        box_editclient.firstElementChild.innerHTML+=`Editar cliente: ${el.nextElementSibling.firstElementChild.firstElementChild.firstElementChild.textContent}`
         clientes.classList.add("sumiu")
         box_editclient.classList.add("ativado")
         const main = document.querySelector("main")
@@ -194,7 +195,6 @@ class boxEditarCliente{
 
     close(){
         const box_editclient = document.querySelector(".box_editclient")
-        box_editclient.firstElementChild.innerHTML="Editar cliente: "
         clientes.classList.remove("sumiu")
         box_editclient.classList.remove("ativado")
         const body = document.querySelector("body")
