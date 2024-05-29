@@ -97,17 +97,30 @@ const edit_cliente = document.querySelector(".edit_cliente")
 edit_cliente.addEventListener("click", (evt)=>{
 
     const client_info = [...document.querySelectorAll(".client_info input")]
-    client_info.find((el)=>{
-        
-        if(el.checked){
-            boxEditarCliente()
+    const cli = client_info.find((el)=>{
 
-            const confirm = document.querySelector(".confirm")
-            confirm.addEventListener("click",()=>{
-                editandoCliente(el)
-            })
+        if(el.checked){
+            
+            return el         
         }
+
     })
+
+    if(cli){
+        const edit = new boxEditarCliente
+            edit.open()
+            const cancel = document.querySelector(".cancelar")
+            cancel.addEventListener("click",(evt)=>{
+                edit.close()
+            })
+            const confirm = document.querySelector(".confirmar")
+            confirm.addEventListener("click",()=>{
+                edit.editandoCliente(cli)
+                console.log(cli);
+                edit.close()
+            })
+    }
+
     const nada = client_info.every((el)=>{
         if(el.checked==false){
             return true
@@ -140,4 +153,3 @@ button_remove.addEventListener("click",()=>{
 })
 
 //ABRINDO MAIS INFORMAÇÕES SOBRE O CLIENTE
-

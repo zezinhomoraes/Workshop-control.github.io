@@ -151,6 +151,13 @@ const boxRemoveClient = function(el, i){
         el.parentElement.parentElement.remove()
            
         clientesArmazenados.splice(i, 1)
+
+        clientesArmazenados.map((el, i)=>{
+            i++
+            el.id = i
+            console.log(i);
+            console.log(el.id);
+        })
             
         localStorage.clear()
             
@@ -175,31 +182,41 @@ const boxRemoveClient = function(el, i){
     })
 }
 
-const boxEditarCliente = function(){
-    
-    const box_editclient = document.querySelector(".box_editclient")
-    clientes.classList.add("sumiu")
-    box_editclient.classList.add("ativado")
-    const main = document.querySelector("main")
-    main.appendChild(box_editclient)
-
-}
-
-const editandoCliente = function(el){
-    const id = Number(el.value)
-
-    let dadosOBJ = {
-            nome  : dados_edit[0].children[1].value,
-            contato  : dados_edit[1].children[1].value,
-            zap : dados_edit[2].children[1].value,
-            bike  : dados_edit[3].children[1].value,
-            servico  : dados_edit[4].children[1].value,
-            data  : dados_edit[5].children[1].value,
-            maisInfo: dados_edit[6].children[1].value,
-            id: id
+class boxEditarCliente{
+    open(){
+        const box_editclient = document.querySelector(".box_editclient")
+        clientes.classList.add("sumiu")
+        box_editclient.classList.add("ativado")
+        const main = document.querySelector("main")
+        main.appendChild(box_editclient)
     }
-    const dadosArmazenados = JSON.stringify(dadosOBJ)
-    localStorage.setItem("id"+id, dadosArmazenados)
-    console.log(localStorage);
-    
+
+    close(){
+        const box_editclient = document.querySelector(".box_editclient")
+        clientes.classList.remove("sumiu")
+        box_editclient.classList.remove("ativado")
+        const body = document.querySelector("body")
+        body.appendChild(box_editclient)
+    }
+
+    editandoCliente(el){
+        const id = Number(el.value)
+        let dadosOBJ = {
+                nome  : dados_edit[0].children[1].value,
+                contato  : dados_edit[1].children[1].value,
+                zap : dados_edit[2].children[1].value,
+                bike  : dados_edit[3].children[1].value,
+                servico  : dados_edit[4].children[1].value,
+                data  : dados_edit[5].children[1].value,
+                maisInfo: dados_edit[6].children[1].value,
+                id: id
+        }
+        const dadosArmazenados = JSON.stringify(dadosOBJ)
+        localStorage.setItem("id"+dadosOBJ.id, dadosArmazenados)
+        console.log(localStorage);
+
+        location.reload()
+    }
+
 }
+
