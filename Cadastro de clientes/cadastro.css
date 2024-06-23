@@ -379,13 +379,13 @@ article{
         color: blue;
     }
     .client_info{
-        height: 100px;
+        height: 110px;
     }
-    .client_contact{
-        margin-top: 5px;
+    .client_contact p{
+        margin: 5px  0;
     }
-    .client_service{
-        margin-top: 5px;
+    .client_service p{
+        margin: 5px 0;
     }
 
     .infoFast input{
@@ -409,6 +409,7 @@ article{
 
     .moreInfoContent{
         font-size: 10px;
+        font-weight: 500;
     }
 
     .infoFast{
