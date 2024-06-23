@@ -62,12 +62,13 @@ class setNewClient{
         
         const moreInfoContent = document.createElement("article")
         moreInfoContent.classList.add("moreInfoContent")
-        moreInfoContent.innerHTML=`<h3>Mais informações:</h3><br/>${this.maisinfo}`
-        
-        
+        moreInfoContent.innerHTML=`<h3>Mais informações:</h3><br/>`
+        const p = document.createElement('p')
+        p.innerHTML=this.maisinfo
 
         clientInfo.appendChild(infoFast)
         clientInfo.appendChild(moreInfoContent)
+        moreInfoContent.appendChild(p)
         infoFast.appendChild(inputRadio)
         boxs[0].appendChild(name)
         boxs[0].appendChild(contato)
